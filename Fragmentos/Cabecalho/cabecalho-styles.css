@@ -1,0 +1,69 @@
+body {
+    /* zera as margens do body */
+    margin: 0px;
+}
+
+header {
+    /* posiciona o cabeçalho de forma fixa e sempre presente */
+    position: fixed;
+
+    /* garante que o cabeçalho sempre esteja no início da página */
+    top: 0;
+
+    /* cor de fundo */
+    background-color: gray;
+
+    /* cor da fonte */
+    color: white;
+
+    /* densidade do negrito */
+    font-weight: 500;
+
+    /* Deixa os elementos que estão dentro do header alinhados em uma única linha */
+    display: flex;
+
+    /* Distribui os elementos de forma uniforme na mesma linha, ou seja, precisa do "display: flex;" */
+    justify-content: space-around;
+
+    /* Define a altura do cabeçalho (header) */
+    height: 68px;
+
+    /* define a largura do cabeçalho */
+    width: 100%;
+
+    /* alinha os textos, no eixo vertical, de forma centralizada */
+    align-items: center;
+
+    /* tamanho da fonte 16px + 8px = 24px */
+    font-size: 1.5rem;
+}
+
+/* seletor espaço é o seletor DESCENDENTE, ou seja, seleciona todos os elementos A que são filhos de HEADER */
+header a{
+    /* remove o underline padrão */
+    text-decoration: none;
+    
+    /* muda a cor do texto para branco */
+    color: white;
+    
+    /* coloca uma margem interna, na linha, de 8px */
+    padding-inline: 0.5rem;
+}
+
+/* adiciona uma pseudoclasse ao elemento A, ao passar o mouse sobre o elemento, o estilo mudará */
+header a:hover{
+    /* adiciona um underline ao passar o mouse sobre o elemento */
+    text-decoration: underline;
+}
+
+/* seletor de DESCENDENTE */
+header span{
+    /* tamanho da fonte é 32px */
+    font-size: 2rem;
+    
+    /* cor da fonte é laranja */
+    color: orange;
+
+    /* define uma sombra para o texto, sendo: eixo HORIZONTAL, eixo VERTICAL, BLUR e COR */
+    text-shadow: 2px 5px 5px red;
+}

@@ -1,0 +1,48 @@
+/* selecionei o body */
+body {
+    /* removi todas as margens */
+    margin: 0px;
+}
+
+/* selecionei o footer (rodapé) */
+footer {
+    /* cor de fundo cinza */
+    background-color: gray;
+
+    /* força o rodapé ficar no final da tela de INÍCIO, eventualmente faz-se necessário remover esta propriedade pois não fixa o rodapé ao final da página para qualquer conteúdo */
+    bottom: 0px;
+
+    /* posição mais embaixo (desde que fique após o último elemento), mas não aparece sempre */
+    position: absolute;
+
+    /* largura do rodapé */
+    width: 100%;
+
+    /* posiciona todos os elementos filhos em uma única linha */
+    display: flex;
+
+    /* centraliza verticalmente, precisa do display flex */
+    align-items: center;
+
+    /* centraliza horizontalmente, precisa do display flex */
+    justify-content: center;
+
+    /* cor do texto */
+    color: white;
+
+    /* tamanho do texto 16px */
+    font-size: 1rem;
+
+    /* borda no topo do elemento */
+    border-top: 2px solid red;
+
+    /* padding para cima e para baixo */
+    padding-block: 0.5rem;
+
+    /* define a altura para 48px */
+    height: 3rem;
+}
+
+footer span{
+    text-shadow: 0.1px 0.1px 2px #fefefe80;
+}
