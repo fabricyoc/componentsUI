@@ -1,0 +1,97 @@
+/* reset básico */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.card {
+    /* margens do card para melhor visualizar */
+    margin: auto;
+    margin-top: 5rem;
+
+    /* cor de fundo e sombra */
+    background-color: aqua;
+    box-shadow: 1px 1px 5px greenyellow;
+
+    /* altura e largura do card */
+    width: 15rem;
+    height: 20rem;
+
+    /* display flex habilitado */
+    display: flex;
+    /* direção do display flex está em colunas */
+    flex-direction: column;
+    /* alinhamento horizontal está centralizado, depende do flex */
+    align-items: center;
+    /* espaçamento entre os itens está equitativo */
+    justify-content: space-around;
+    
+    /* bordas estão arredondadas */
+    border-radius: 5px;
+    /* margem interna de 4px */
+    padding: 4px;
+}
+
+.card img {
+    /* largura da imagem */
+    width: 225px;
+    /* borda da imagem */
+    border-radius: 5px;
+    /* sombra da imagem */
+    box-shadow: 1px 1px 5px gray;
+    /* tempo de transição da imagem */
+    transition: 0.5s;
+}
+
+.card img:hover {
+    /* escala de aumento da imagem ao passar o cursor sobre a imagem */
+    transform: scale(1.02);
+    /* tipo do cursor */
+    cursor: pointer;
+}
+
+.card .titulo {
+    /* tamanho da fonte do título, negritude e alinhamento */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card .descricao {
+    /* tamanho da fonte da descrição e alinhamento */
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card button {
+    /* largura e altura do botão */
+    width: 100%;
+    height: 2rem;
+
+    /* tamanhoa e negritude da fonte */
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    /* remoção das bordas e arredondamento */
+    border: none;
+    border-radius: 5px;
+
+    /* cor de fundo e cor da fonte */
+    background-color: greenyellow;
+    color: gray;
+}
+
+.card button:hover {
+    /* ao passar o cursor sobre o botão, o texto ficará branco */
+    color: white;
+    /* a cor de fundo será verde */
+    background-color: green;
+    /* o estilo do cursor será com um dedinho */
+    cursor: pointer;
+}
