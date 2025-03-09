@@ -1,11 +1,11 @@
 function toggleSidebar(){
     const sideBar = document.getElementById("sidebar");
-    let displaySidebar = window.getComputedStyle(sideBar).display;
+    let displaySidebar = window.getComputedStyle(sideBar).visibility;
     
-    if (displaySidebar === "block") {
-        sideBar.style.display = "none";
+    if (displaySidebar === "hidden") {
+        sideBar.style.visibility = "visible";
     } else{
-        sideBar.style.display = "block";
+        sideBar.style.visibility = "hidden";
 
     }
 

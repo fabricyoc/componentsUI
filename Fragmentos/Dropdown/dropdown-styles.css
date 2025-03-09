@@ -20,14 +20,14 @@ header{
     font-size: 1.5rem;
 }
 
-header div{
+header nav{
     /* obrigatório deixar a div com a posição relativa */
     position: relative;
     /* estilo do cursor */
     cursor: pointer;
 }
 
-div .dropdown{
+nav .dropdown{
     /* cores */
     background-color: black;
     color: white;
@@ -35,9 +35,9 @@ div .dropdown{
     list-style-type: none;
     /* tamanho da fonte do dropdown */
     font-size: 1rem;
-    /* posição absoluta de acordo com a div pai, que está relativa */
+    /* posição absoluta de acordo com a nav pai, que está relativa */
     position: absolute;
-    /* posição do dropdown de acordo com a div pai */
+    /* posição do dropdown de acordo com a nav pai */
     left: 1rem;
     /* largura do dropdown */
     width: 5rem;
@@ -49,7 +49,7 @@ div .dropdown{
     border-radius: 5px;
 }
 
-div .dropdown li{
+nav .dropdown li{
     /* espaçamento interno entre elementos */
     padding-block: 1rem;
     /* animação do background terá duração de 5s */
@@ -57,15 +57,15 @@ div .dropdown li{
 
 }
 
-div .dropdown li:hover{
+nav .dropdown li:hover{
     /* cor de fundo ao passar o mouse sobre cada li */
     background-color: #333;
     /* borda ao passar o mouse sobre cada li */
     border-radius: 5px;
 }
 
-div:hover .dropdown{
-    /* ao passar o mouse sobre a div (outros) o dropdown será exibido */
+nav:hover .dropdown{
+    /* ao passar o mouse sobre a nav (outros) o dropdown será exibido */
     visibility: visible;
 
 }

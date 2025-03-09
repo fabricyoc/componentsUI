@@ -27,6 +27,8 @@
     min-height: 50vh;
     /* negritude */
     font-weight: bold;
+    /* deixa o sidebar oculto */
+    visibility: hidden;
 }
 
 #sidebar ul {
