@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#sidebar {
+    position: inherit;
+    background-color: gray;
+    height: 450px;
+    width: 15rem;
+
+    display: flex;
+    /* alinha horizontalmente de forma equitativa */
+    justify-content: space-around;
+}
+
+#sidebar ul {
+    /* remove a bolinha da ul */
+    list-style: none;
+    /* largura da ul */
+    width: 100%;
+    /* alinhamento do texto */
+    text-align: center;
+    /* margem superior */
+    margin-top: 2rem;
+
+}
+
+#sidebar ul li {
+    padding-block: 1.5rem;
+}
+
+#sidebar ul li:hover {
+    background-color: green;
+}

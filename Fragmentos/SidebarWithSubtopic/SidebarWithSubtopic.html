@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fragmentos da Web" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Fabricyo Costa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/fabricyoc/fabricyoc.github.io/refs/heads/master/src/favicon.ico"
+        type="image/x-icon">
+
+    <link rel="stylesheet" href="SidebarWithSubtopic.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Subtopic</title>
+</head>
+
+<body>
+    <aside class="menu-lateral">
+        <ul>
+            <li>
+                <button class="menu-btn" onclick="toggleSubmenu('submenu1')">Opção 1 &#x25BC;</button>
+                <ul class="submenu" id="submenu1">
+                    <li><a href="#">Sub 1.1</a></li>
+                    <li><a href="#">Sub 1.2</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <button class="menu-btn" onclick="toggleSubmenu('submenu2')">Opção 2 &#x25BC;</button>
+                <ul class="submenu" id="submenu2">
+                    <li><a href="#">Sub 2.1</a></li>
+                    <li><a href="#">Sub 2.2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <script src="script.js"></script>
+</body>
+
+</html>
