@@ -1,0 +1,71 @@
+/* reset básico do css */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    /* cor de fundo */
+    background-color: gray;
+    /* altura do cabeçalho */
+    height: 80px;
+    /* posição dos elementos dentro do header */
+    display: flex;
+    /* espaçamento horizontal dentro do header, precisa do display flex */
+    justify-content: space-around;
+    /* espaçamento vertical, precisa do display flex */
+    align-items: center;
+    /* tamanho dos textos: 24px */
+    font-size: 1.5rem;
+}
+
+header div{
+    /* obrigatório deixar a div com a posição relativa */
+    position: relative;
+    /* estilo do cursor */
+    cursor: pointer;
+}
+
+div .dropdown{
+    /* cores */
+    background-color: black;
+    color: white;
+    /* remove a bolinha do ul */
+    list-style-type: none;
+    /* tamanho da fonte do dropdown */
+    font-size: 1rem;
+    /* posição absoluta de acordo com a div pai, que está relativa */
+    position: absolute;
+    /* posição do dropdown de acordo com a div pai */
+    left: 1rem;
+    /* largura do dropdown */
+    width: 5rem;
+    /* alinhamento dos textos do dropdown */
+    text-align: center;
+    /* visibilidade padrão */
+    visibility: hidden;
+    /* arredondamento das bordas */
+    border-radius: 5px;
+}
+
+div .dropdown li{
+    /* espaçamento interno entre elementos */
+    padding-block: 1rem;
+    /* animação do background terá duração de 5s */
+    transition: background 0.5s;
+
+}
+
+div .dropdown li:hover{
+    /* cor de fundo ao passar o mouse sobre cada li */
+    background-color: #333;
+    /* borda ao passar o mouse sobre cada li */
+    border-radius: 5px;
+}
+
+div:hover .dropdown{
+    /* ao passar o mouse sobre a div (outros) o dropdown será exibido */
+    visibility: visible;
+
+}
