@@ -1,0 +1,59 @@
+#menu {
+    /* posição absoluta ao elemento pai, necessário definir a posição de cima, baixo, direita ou esquerda */
+    position: absolute;
+    /* posição de cima */
+    top: 1rem;
+    /* posição da esquerda */
+    left: 1rem;
+    /* estilo do cursor: dedo */
+    cursor: pointer;
+    /* nível de profundidade do elemento */
+    z-index: 30;
+    display: flex;
+}
+
+#sidebar {
+    /* posição relativa ao elemento pai */
+    position: relative;
+    /* nível de profundidade do elemento, como é menor fica embaixo (sob) */
+    z-index: 20;
+    /* margem interna */
+    padding-top: 2rem;
+    /* cor de fundo */
+    background-color: #8211ec90;
+    /* largura */
+    width: 10rem;
+    /* altura mínima: 50% do ViewPort */
+    min-height: 50vh;
+    /* negritude */
+    font-weight: bold;
+}
+
+#sidebar ul {
+    /* remove a bolinha do ul */
+    list-style: none;
+    /* largura da ul */
+    width: 100%;
+    /* remove as margens internas da ul*/
+    padding-left: 0;
+}
+
+#sidebar li {
+    /* margem interna em cima e embaixo */
+    padding-block: 0.5rem;
+    /* adiciona margens internas para li, ocupando todo espaço horizontal */
+    padding-left: 2rem;
+}
+
+#sidebar li:hover {
+    /* cor de fundo ao passar o mouse sobre */
+    background-color: #8211ec;
+    /* cor do texto */
+    color: #f4f4f4;
+    /* estilo do cursor */
+    cursor: pointer;
+}
+#sidebar ul hr{
+    margin-top: 90%;
+    width: 90%;
+}
