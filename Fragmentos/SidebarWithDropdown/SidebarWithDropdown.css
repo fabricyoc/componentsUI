@@ -1,3 +1,4 @@
+/* reset básico */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,38 +6,63 @@
 }
 
 #menu {
+    /* menu está com a posição absoluta para ficar sobre o sidebar */
     position: absolute;
+    /* definição da posição ao topo e à esquerda */
     top: 10px;
     left: 10px;
+    padding: 4px;
+    font-size: 1rem;
 }
 
 #sidebar {
-    position: inherit;
-    background-color: gray;
+    background-color: #777777;
+    /* dimensões do sidebar */
     height: 450px;
     width: 15rem;
-
+    /* display flex alinhado em colunas */
     display: flex;
-    /* alinha horizontalmente de forma equitativa */
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 #sidebar ul {
-    /* remove a bolinha da ul */
     list-style: none;
-    /* largura da ul */
     width: 100%;
-    /* alinhamento do texto */
     text-align: center;
-    /* margem superior */
-    margin-top: 2rem;
-
+    margin-top: 40px;
 }
 
 #sidebar ul li {
-    padding-block: 1.5rem;
+    padding: 1.5rem;
+    /* position relativa nas li é obrigatório para exibir os submenus */
+    position: relative;
 }
 
 #sidebar ul li:hover {
     background-color: green;
+    cursor: pointer;
+}
+
+/* Estilização dos submenus */
+.submenu {
+    /* oculta todos os submenus */
+    display: none;
+    /* preciso definir a posição dos submenus */
+    position: absolute;
+    left: 100%;
+    top: -3rem;
+    background-color: #444;
+    width: 10rem;
+    text-align: left;
+}
+
+.submenu li {
+    padding: 10px;
+    color: white;
+}
+
+/* Exibir submenu ao passar o mouse */
+#sidebar ul li:hover .submenu {
+    display: block;
 }
