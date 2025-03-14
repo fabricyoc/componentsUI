@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fragmentos da Web" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Fabricyo Costa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/fabricyoc/fabricyoc.github.io/refs/heads/master/src/favicon.ico"
+        type="image/x-icon">
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Cadastro de Usuário</legend>
+            
+            <label for="nome">Nome:</label>
+            <input type="text" placeholder="Digite seu nome..." id="nome" />
+            
+            <label for="dataNasc">Data de Nascimento:</label>
+            <input type="date" id="dataNasc" />
+
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="Digite seu e-mail..." id="email"/>
+
+            <label for="senha">Senha:</label>
+            <input type="password" placeholder="Digite sua senha..." id="senha" />
+            
+            <label for="confirSenha">Confirme sua senha:</label>
+            <input type="password" placeholder="Confirme sua senha..." id="confirSenha" />
+
+            <button type="submit">Cadastrar</button>
+        </fieldset>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
