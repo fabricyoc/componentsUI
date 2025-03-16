@@ -6,11 +6,14 @@ document.getElementById("dataNasc").setAttribute("max", dataHoje);
 
 // Seleciona todos os inputs da página
 const inputs = document.querySelectorAll("input");
+
 inputs.forEach(
     input => {
+        // quando o input perder o focus()
         input.addEventListener("blur", () => {
             input.value === "" ? input.classList.add("inputNaoPreenchido") : input.classList.remove("inputNaoPreenchido");
         });
     }
 );
+
 

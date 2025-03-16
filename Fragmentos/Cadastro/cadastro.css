@@ -10,6 +10,11 @@ form {
     width: 30rem;
 }
 
+:root {
+    --cor-primaria: #04eb04;
+    --cor-secundaria: #02cf02;
+}
+
 /* colocou todo conteúdo do fieldset em colunas */
 form fieldset {
     display: flex;
@@ -33,11 +38,11 @@ form fieldset input {
 
 form fieldset input:focus {
     border: none;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid var(--cor-secundaria);
 }
 
 form fieldset label:has(+ input:focus) {
-    color: green;
+    color: var(--cor-secundaria);
     font-weight: bolder;
 }
 
@@ -47,11 +52,33 @@ form fieldset button {
     font-weight: bold;
     border: none;
     border-radius: 3px;
-    background-color: #04eb04;
+    background-color: var(--cor-primaria);
     color: black;
 }
 
 form fieldset button:hover {
     cursor: pointer;
-    background-color: #02cf02;
+    background-color: var(--cor-secundaria);
+}
+
+/* foto */
+#foto {
+    display: none;
+}
+
+#addFoto {
+    font-size: 2rem;
+    padding: 0;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--cor-primaria);
+    color: black;
+    text-align: center;
+
+}
+
+#addFoto:hover{
+    background-color: var(--cor-secundaria);
+    cursor: pointer;
 }

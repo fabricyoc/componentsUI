@@ -18,19 +18,25 @@
     <form action="#">
         <fieldset>
             <legend>Cadastro de Usuário</legend>
-            
+
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" accept="image/*" />
+            <label for="foto" id="addFoto">+</label>
+            <!-- Não utilizei o BUTTON porque seria necessário trabalhar com JS -->
+            <!-- <button type="button" id="addFoto">+</button> -->
+
             <label for="nome">Nome:</label>
             <input type="text" placeholder="Digite seu nome..." id="nome" />
-            
+
             <label for="dataNasc">Data de Nascimento:</label>
             <input type="date" id="dataNasc" />
 
             <label for="email">E-mail:</label>
-            <input type="email" placeholder="Digite seu e-mail..." id="email"/>
+            <input type="email" placeholder="Digite seu e-mail..." id="email" />
 
             <label for="senha">Senha:</label>
             <input type="password" placeholder="Digite sua senha..." id="senha" />
-            
+
             <label for="confirSenha">Confirme sua senha:</label>
             <input type="password" placeholder="Confirme sua senha..." id="confirSenha" />
 
