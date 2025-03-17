@@ -48,12 +48,6 @@ header nav ul li:hover .login {
     visibility: visible;
 }
 
-/* conteúdo */
-section{
-    margin: 1rem;
-    text-align: justify;
-}
-
 .login {
     background-color: var(--bg-terciaria);
     border-radius: 4px;
@@ -106,4 +100,143 @@ footer {
 
 footer span {
     font-weight: bolder;
+}
+
+/* 
+    Tela de Login
+*/
+
+.identificacao {
+    /* background-color: green; */
+    height: calc(100vh - 80px - 40px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.identificacao h1{
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px var(--bg-terciaria);
+}
+
+.identificacao form{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+}
+
+.identificacao form label{
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: var(--bg-terciaria);
+}
+
+.identificacao form input{
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    font-size: 14px;
+    padding: 8px;
+    color: var(--bg-terciaria);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.5s;
+}
+
+.identificacao form input:focus{
+    box-shadow: 0px 0px 8px var(--bg-terciaria);
+}
+
+.identificacao div h3{
+    color: var(--bg-terciaria);
+    text-shadow: 0px 0px 8px var(--bg-secundaria);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.identificacao button[type="submit"]{
+    padding-block: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: #38eb38;
+    font-weight: bolder;
+    transition: background-color 0.5s;
+    margin-bottom: 4px;
+}
+
+.identificacao button[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #30ce30;
+    color: var(--bg-terciaria);
+}
+
+/* cadastro */
+
+.cadastro {
+    /* background-color: green; */
+    height: calc(100vh - 80px - 40px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cadastro h1{
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px var(--bg-terciaria);
+}
+
+.cadastro form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+}
+
+.cadastro form label{
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: var(--bg-terciaria);
+}
+
+.cadastro form input{
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    font-size: 14px;
+    padding: 8px;
+    color: var(--bg-terciaria);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.5s;
+}
+
+.cadastro form input:focus{
+    box-shadow: 0px 0px 8px var(--bg-terciaria);
+}
+
+.cadastro div h3{
+    color: var(--bg-terciaria);
+    text-shadow: 0px 0px 8px var(--bg-secundaria);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.cadastro button[type="submit"]{
+    padding-block: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: #38eb38;
+    font-weight: bolder;
+    transition: background-color 0.5s;
+    margin-bottom: 4px;
+}
+
+.cadastro button[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #30ce30;
+    color: var(--bg-terciaria);
 }
