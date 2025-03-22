@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fragmentos da Web" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Fabricyo Costa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho Responsivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header para definir um cabeçalho semântico no HTML -->
+    <header>
+        <figure>
+            <img src="./menu.png" alt="menu" id="menu">
+        </figure>
+        <span>LOGO</span>
+        <nav id="nav-responsible">
+            <a href="#">Sobre</a>
+            <a href="#">Contatos</a>
+        </nav>
+    </header>
+    <script>
+        document.getElementById("menu").addEventListener("click", function () {
+            const navResponsible = document.getElementById("nav-responsible");
+            const visibilityNavResponsible = window.getComputedStyle(navResponsible).visibility;
+
+            if (visibilityNavResponsible == "hidden") {
+                navResponsible.style.visibility = "visible";
+            } else {
+                navResponsible.style.visibility = "hidden"
+
+            }
+
+        });
+
+        function checkScreenWidth() {
+            const nav = document.querySelector('nav'); // Seleciona o elemento nav
+            if (window.innerWidth < 768) {
+                // Se a largura da tela for menor que 768px
+                nav.style.visibility = 'hidden';  // Esconde o menu
+            } else {
+                // Se a largura da tela for maior ou igual a 768px
+                nav.style.visibility = 'visible'; // Mostra o menu
+            }
+        }
+        // Chama a função sempre que a largura da tela mudar (quando o usuário redimensiona a janela)
+        window.addEventListener('resize', checkScreenWidth);
+
+    </script>
+</body>
+
+</html>
