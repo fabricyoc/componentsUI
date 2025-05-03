@@ -78,3 +78,12 @@ function atualizarCarrinho() {
 
 document.addEventListener('DOMContentLoaded', atualizarCarrinho);
 exibirCategorias();
+
+
+// mover a tela para o topo
+document.querySelector('.toup').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

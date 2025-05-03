@@ -50,6 +50,9 @@ body {
   align-items: center;
   padding-inline: 2rem;
 
+  position: fixed;
+  top: 0;
+
   background-color: var(--orange-400);
   box-shadow: 0 2px 5px var(--orange-300);
 }
@@ -95,6 +98,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*
+  Ir para cima
+*/
+.toup{
+  position: fixed;
+  right: 6px;
+  bottom: 6px;
+
+  cursor: pointer;
+
+  font-size: 2.5rem;
+
 }
 
 /*
@@ -155,6 +172,7 @@ body {
   Lista de itens no carrinho
 */
 .container-carrinho{
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -172,8 +190,12 @@ body {
   padding: 4px 8px;
 }
 
+.lista-produtos{
+  margin-top: 120px;
+}
+
 .lista-produtos-carrinho{
-  height: 50vh;
+  max-height: 50vh;
   width: 90%;
   margin-block: 2rem 1rem;
   overflow-y: auto;

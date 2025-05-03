@@ -12,6 +12,8 @@ function atualizarCarrinho() {
   // Atualiza a quantidade na interface
   const total = produtosCarrinho.length;
   qntProdutosCarrinho.textContent = total > 99 ? '+99' : total;
+
+  exibirItensCarrinho();
 }
 
 document.addEventListener('DOMContentLoaded', atualizarCarrinho);
@@ -20,9 +22,10 @@ document.addEventListener('DOMContentLoaded', atualizarCarrinho);
 /**
  * Exibir itens do carrinho
  */
-function exibirItensCarrinho(){
+function exibirItensCarrinho() {
   // busca o elemento
   const listaProdutosElement = document.querySelector('.lista-produtos-carrinho');
+  listaProdutosElement.innerHTML = '';
 
   // recupera itens no localStorage
   const itensCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -44,9 +47,36 @@ function exibirItensCarrinho(){
     valorTotalElement.textContent = `Total a pagar: ${formatarPreco(valorTotal)}`;
 
     listaProdutosElement.appendChild(itemCard);
+
+    const btnRemover = itemCard.querySelector('.btnRemover');
+    btnRemover.addEventListener('click', () => {
+      removerItem(i);
+    });
+
   });
-  console.log(valorTotalElement);
-  
+
+}
+
+function removerItem(produto) {
+  alert(`Removendo o produto: ${produto.nome} - ${produto.preco}`);
+
+  const itensCarrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+  // Encontra o índice da primeira ocorrência do item
+  const index = itensCarrinho.findIndex(item =>
+    item.nome === produto.nome && item.preco === produto.preco
+  );
+
+  // Se encontrou, remove
+  if (index !== -1) {
+    itensCarrinho.splice(index, 1);
+    localStorage.setItem('carrinho', JSON.stringify(itensCarrinho));
+    // console.log('Produto removido. Carrinho atualizado:', itensCarrinho);
+  } else {
+    alert('Produto não encontrado.');
+  }
+
+  atualizarCarrinho();
 }
 
 exibirItensCarrinho();
