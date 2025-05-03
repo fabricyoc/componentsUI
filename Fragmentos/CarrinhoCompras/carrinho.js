@@ -29,8 +29,7 @@ function exibirItensCarrinho(){
 
   // preço total
   let valorTotal = 0;
-  const valorTotalElement = document.createElement('div');
-  valorTotalElement.classList.add('valor-total');
+  const valorTotalElement = document.querySelector('.valor-total');
 
   itensCarrinho.map((i, index) => {
     const itemCard = document.createElement('div');
@@ -45,7 +44,6 @@ function exibirItensCarrinho(){
     valorTotalElement.textContent = `Total a pagar: ${formatarPreco(valorTotal)}`;
 
     listaProdutosElement.appendChild(itemCard);
-    listaProdutosElement.appendChild(valorTotalElement);
   });
   console.log(valorTotalElement);
   

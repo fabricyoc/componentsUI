@@ -154,9 +154,28 @@ body {
 /*
   Lista de itens no carrinho
 */
+.container-carrinho{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.valor-total{
+  font-size: 1.125rem;
+  font-weight: bold;
+  
+  background-color: var(--orange-500);
+  border-radius: 4px;
+
+  padding: 4px 8px;
+}
 
 .lista-produtos-carrinho{
   height: 50vh;
+  width: 90%;
+  margin-block: 2rem 1rem;
   overflow-y: auto;
 
   /* background-color: red; */
@@ -165,8 +184,8 @@ body {
   flex-direction: column;
   gap: 1rem;
 
-  padding: 0 2rem;
-  margin: 1rem;
+  padding-inline: 10px;
+ 
 }
 
 .lista-produtos-carrinho::-webkit-scrollbar{
